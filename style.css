@@ -1,19 +1,23 @@
 body {
   display: flex;
   justify-content: center;
+  height: 800px;
+  width: 800px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1 auto;
 }
-div#main{
+div.main{
 display: flex;
-height: 1080px;
-width: 800px;
 background-color: red;
-flex-wrap: wrap;
+height: auto;
+flex: 1 auto;
+
 }
 
-.grid {
-  display: flex;
-  max-height: 360px;
-  width: 12em;
+div.grid {
   flex: 1 1 auto;
   border: 2px solid blue;
+  max-width: 400px;
+  max-height: 400px;
 }
