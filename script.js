@@ -1,12 +1,25 @@
-const main = document.querySelector('#main');
+const main = document.querySelector('.main');
+const body = document.querySelector('#parent');
 
-function createDiv() {
-  for ( let i = 0 ; i < 16; i++) {
-    const div = document.createElement('div');
-    main.appendChild(div);
-    div. classList.add('grid');
-  } 
+let x = 16;
+
+function createCol(x) {
+  for ( let i=0 ; i < x; i++) {
     
+    const div = document.createElement('div');
+    body.appendChild(div);
+    div.classList.add('main');
+  } 
 }
-  
-createDiv();
+
+createCol (x);
+
+const mains = document.querySelectorAll('.main');
+
+mains.forEach((mainsDiv) => {
+  for ( let i=0 ; i < x; i++) {
+  const div = document.createElement('div');
+    mainsDiv.appendChild(div);
+    div.classList.add('grid');
+  }
+});
