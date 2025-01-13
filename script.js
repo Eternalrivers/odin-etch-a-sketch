@@ -72,7 +72,21 @@ btn.addEventListener('click', () => {
       div.classList.add('grid');
     }
   });
-  
+  //redeclares const and eventListener after grid deletion
+  const grid = document.querySelectorAll('.grid');
+
+  grid.forEach (grids => {
+    grids.addEventListener('mouseenter', (e) => {
+
+    const r =  Math.floor(Math.random()*255);
+    const g =  Math.floor(Math.random()*255);
+    const b =  Math.floor(Math.random()*255);
+
+    e.target.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+    console.log(`rgb(${r},${g},${b})`);
+  })
+});
 })
 
 function deleteChild() {
