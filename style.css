@@ -1,30 +1,47 @@
  body {
   display: flex;
   justify-content: center;
-   width: 1400px;
+  width: 1400px;
   height: 1400px;
-  margin: 12em auto;
+  margin: 12.5em auto;
  }
-#parent {
+
+ #mainCont {
   display: flex;
   justify-content: center;
   max-height: 800px;
   max-width: 800px;
   flex-wrap: wrap;
   flex-direction: column;
-  flex: 1 auto;
-
+  flex:1 1 auto;
+  border: 2px solid black;
 }
+
 div.main{
 display: flex;
-background-color: red;
+background-color:  white;
 flex: 1 auto;
 
 }
 
 div.grid {
+  display: flex;
   flex: 1 1 auto;
-  border: 2px solid blue;
   max-width: 400px;
   max-height: 400px;
+  opacity: 0.1;
+ }
+
+.resetBtn{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
 }
+
+button {
+  max-width: 100px;
+  max-height: 2em;
+  margin: 0 auto;
+}
+
